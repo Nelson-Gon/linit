@@ -23,7 +23,11 @@ These are stored in `installer.sh` which does the following:
 
 **How to use the installer**
 ```
+cd ~/Desktop
+git clone https://github.com/Nelson-Gon/linit.git
+cd linit
 bash installer.sh
+# enter root password once prompted
 # That's it
 
 ```
