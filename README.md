@@ -3,6 +3,10 @@
 
 This repository provides a seamless way to install many of the commonly used programs/scripts.
 
+It has been tested on an Ubuntu system and might therefore fail to run on a non Debian based distribution. In addition, some of these programs are based on amd64 architecture and might therefore not work on a 32-bit system.
+
+The script will run for sometime for a fresh installation depending on the network speed and/or hardware. 
+
 
 **What the installer does**
 
@@ -19,11 +23,18 @@ These are stored in `installer.sh` which does the following:
 9. Installs the `plank` dock.
 10. Installs `pandoc`, `texlive`,`mupdf`,`evince`, `gimp`
 11. Installs `Firefox`, `wine`
+12. Installs `openssh`, `openssl`
+13. You can uncomment some lines to edit such files as the `grub` file, `sudoers` list and/or `.bashrc`. 
 
 
 **How to use the installer**
 ```
+# You can choose a different directoy(Downloads for instance)
 cd ~/Desktop
+# if you do not have git installed, first run the next line
+# or download the raw installer.sh script with wget/curl/ your favorite tool
+#sudo apt install --y git
+# clone the repo or do as earlier stated(download raw file)
 git clone https://github.com/Nelson-Gon/linit.git
 cd linit
 bash installer.sh

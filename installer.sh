@@ -55,14 +55,9 @@ rm rstudio*.deb
 sudo apt install -y python3python-ip python-dev
 sudo pip install --upgrade pip
 sudo pip install jupyter pandas matplotlib sklearn scipy numpy requests seaborn
-# install git and vim
-sudo apt install -y git
-# configure git
-#git config --global user.name "username"
-#git config --global user.email "useremail"
 sudo apt install  -y vim
 # set default to vim
-# sudo update-alternatives config editor
+# sudo update-alternatives --config editor
 # choose vim
 # Enable Firewall
 sudo ufw enable
