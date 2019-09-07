@@ -51,10 +51,28 @@ sudo apt  install -y libx11-dev libxt-dev
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 sudo dpkg -i rstudio-1.2.1335-amd64.deb
 rm rstudio*.deb
-# install pip3 and popular libraries
-sudo apt install -y python3python-ip python-dev
-sudo pip install --upgrade pip
-sudo pip install jupyter pandas matplotlib sklearn scipy numpy requests seaborn
+# install python
+sudo apt install -y build-essential checkinstall
+sudo apt install -y libreadline-gplv2-dev libcursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdm-dev sudo apt install -y libc6-dev libbz2-dev libffi-dev zlib1g-dev
+
+# Download and compile from source
+cd /usr/src
+# 3.7.4 at the time of writing
+sudo wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
+sudo tar -xzf Python-3.7.4
+cd Python-3.7.4
+sudo .\configure --enable-optimizations
+# prevent removal of default python files
+sudo make altinstall
+# remove leftover  files
+sudo rm /usr/src/Python-3.7.4.tgz
+
+
+# install pip3 and popular libraries(for ML enthusiasts)
+sudo apt install -y python3-pip
+sudo pip3 install --upgrade pip
+sudo pip3 install jupyter pandas matplotlib sklearn scipy numpy requests seaborn
+# install vim, yaaay
 sudo apt install  -y vim
 # set default to vim
 # sudo update-alternatives --config editor
