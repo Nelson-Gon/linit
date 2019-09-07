@@ -42,7 +42,7 @@ sudo apt install -y macbuntu-os-ithemes-v1804
 # get the plank dock
 sudo apt install -y plank macbuntu-os-plank-theme-v1804
 # install pycharm
-sudo apt install -y snap
+sudo apt install -y snapd
 sudo snap install pycharm-community --classic
 # install r and rstudio
 sudo apt install -y r-base
@@ -54,18 +54,18 @@ rm rstudio*.deb
 # install python
 #sudo apt install -y build-essential checkinstall
 #sudo apt install -y libreadline-gplv2-dev libcursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdm-dev sudo apt install -y libc6-dev libbz2-dev libffi-dev zlib1g-dev
-
+#
 # Download and compile from source
-cd /usr/src
+#cd /usr/src
 # 3.7.4 at the time of writing
-sudo wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
-sudo tar -xzf Python-3.7.4
-cd Python-3.7.4
-sudo .\configure --enable-optimizations
-# prevent removal of default python files
-sudo make altinstall
+#sudo wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
+#sudo tar -xzf Python-3.7.4
+#cd Python-3.7.4
+#sudo .\configure --enable-optimizations
+## prevent removal of default python files
+#sudo make altinstall
 # remove leftover  files
-sudo rm /usr/src/Python-3.7.4.tgz
+#sudo rm /usr/src/Python-3.7.4.tgz
 
 
 # install pip3 and popular libraries(for ML enthusiasts)
@@ -107,6 +107,8 @@ sudo apt install -y firefox
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 sudo apt update
 sudo apt-get install --install-recommends winehq-stable
+# install screenfetch and neofetch
+sudo apt install -y screenfetch neofetch
 
 
 
