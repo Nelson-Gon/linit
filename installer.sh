@@ -52,8 +52,8 @@ wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.d
 sudo dpkg -i rstudio-1.2.1335-amd64.deb
 rm rstudio*.deb
 # install python
-sudo apt install -y build-essential checkinstall
-sudo apt install -y libreadline-gplv2-dev libcursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdm-dev sudo apt install -y libc6-dev libbz2-dev libffi-dev zlib1g-dev
+#sudo apt install -y build-essential checkinstall
+#sudo apt install -y libreadline-gplv2-dev libcursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdm-dev sudo apt install -y libc6-dev libbz2-dev libffi-dev zlib1g-dev
 
 # Download and compile from source
 cd /usr/src
