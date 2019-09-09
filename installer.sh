@@ -109,7 +109,8 @@ sudo apt update
 sudo apt-get install --install-recommends winehq-stable
 # install screenfetch and neofetch
 sudo apt install -y screenfetch neofetch
-
+# install rsync
+sudo apt install -y rsync
 
 
 

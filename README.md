@@ -26,7 +26,9 @@ These are stored in `installer.sh` which does the following:
 12. Installs `openssh`, `openssl`
 13. Installs `screenfetch` and `neofetch`
 14. Installs `vlc`
-15. You can uncomment some lines to edit such files as the `grub` file, `sudoers` list and/or `.bashrc`. 
+15. Installs `rsync`
+16. You can uncomment some lines to edit such files as the `grub` file, `sudoers` list and/or `.bashrc`. 
+
 
 
 **How to use the installer**
