@@ -49,4 +49,4 @@ bash installer.sh
 
 Please provide feedback, add additional tweaks and/or raise issues.
 
-> Free as in Freedom.
+
