@@ -49,7 +49,7 @@ sudo apt install -y r-base
 # install rstudio 1.2.1335
 sudo apt  install -y libx11-dev libxt-dev
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
-sudo dpkg -i rstudio-1.2.1335-amd64.deb
+yes | sudo dpkg -i rstudio-1.2.1335-amd64.deb
 rm rstudio*.deb
 # install python
 #sudo apt install -y build-essential checkinstall
@@ -96,7 +96,7 @@ sudo apt install -y texlive-latex-recommended
 # install pandoc
 # 2.7.3 at the time of writing
 wget https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.deb
-sudo dpkg -i pandoc*
+yes | sudo dpkg -i pandoc*
 rm pandoc*.deb
 # install gparted gimp evince
 sudo apt install -y gimp
