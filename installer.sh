@@ -10,7 +10,7 @@
 sudo apt update && sudo apt upgrade -y
 # add a few useful repositories
 # Boot-repair, things will go wrong and you'll need this at some point
-sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt update
+sudo add-apt-repository -y ppa:yannubuntu/boot-repair && sudo apt update
 sudo apt install -y  boot-repair
 # Propietary drivers
 sudo apt install -y ubuntu-restricted-extras
@@ -34,7 +34,7 @@ sudo apt install -y caffeine
 # sudo apt update
 # add repo for macbuntu themes
 # noobslab, not so nooby
-sudo add-apt-repository ppa:noobslab/macbuntu
+sudo add-apt-repository -y ppa:noobslab/macbuntu
 sudo apt-update
 sudo apt install -y macbuntu-os-icons-v1804
 sudo apt install -y macbuntu-os-ithemes-v1804
@@ -104,7 +104,7 @@ sudo apt install -y evince
 # install firefox
 sudo apt install -y firefox
 # install wine
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+sudo add-apt-repository -y  'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 sudo apt update
 sudo apt-get install --install-recommends winehq-stable
 # install screenfetch and neofetch
