@@ -103,6 +103,11 @@ sudo apt install -y gimp
 sudo apt install -y evince
 # install firefox
 sudo apt install -y firefox
+# install chrome
+pushd ~/Downloads
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm . *.deb
 # install wine
 sudo add-apt-repository -y  'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 sudo apt update
@@ -111,7 +116,8 @@ sudo apt-get install --install-recommends winehq-stable
 sudo apt install -y screenfetch neofetch
 # install rsync
 sudo apt install -y rsync
-
+# configure all packages manually
+sudo dpkg --configure --all
 
 
 
