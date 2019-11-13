@@ -83,7 +83,16 @@ install_docker () {
     yes | sudo systemctl start docker
     yes | sudo systemctl enable docker
 }
-update_system && add_ppas && install_tweakers && install_browsers &&  install_rpy && install_pdf_related && misc_install && remove_old_docker && install_docker && start_programs
+update_system
+add_ppas
+install_tweakers
+install_browsers
+install_rpy
+install_pdf_related
+misc_install
+remove_old_docker
+install_docker
+start_programs
 # Fancy exit
 echo -e "\e[1;43m Thank you for using the installer \e[0m"
 
