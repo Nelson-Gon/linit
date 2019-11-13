@@ -22,7 +22,7 @@ These are stored in `installer.sh` which does the following:
 8. Installs `R`, `RStudio`, ~`python3`(**Python 3.7.4** at the time of writing)~,`pip3`,`pandas`,`matplotlib`,`seaborn`,`sklearn`,`scipy`,`numpy`
 9. Installs the `plank` dock.
 10. Installs `pandoc`, `texlive`,`mupdf`,`evince`, `gimp`
-11. Installs `Firefox`, `wine`
+11. Installs `Firefox`, `chrome`, `wine`
 12. Installs `openssh`, `openssl`
 13. Installs `screenfetch` and `neofetch`
 14. Installs `vlc`
