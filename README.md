@@ -3,8 +3,8 @@
 
 **IMPORTANT**: 
 
-It is recommended to first run the installer in a virtual environment before 
-running it on your machine. Alternatively, you can edit the **installer.sh** file and comment out functions you would not like to run.
+~It is recommended to first run the installer in a virtual environment before 
+running it on your machine. Alternatively, you can edit the **installer.sh** file and comment out functions you would not like to run.~
 
 
 
@@ -40,7 +40,7 @@ These are stored in `installer.sh` which does the following:
 17. You can uncomment some lines to edit such files as the `grub` file, `sudoers` list and/or `.bashrc`. 
 
 
-
+---
 
 **How to use the installer**
 ```
@@ -57,6 +57,7 @@ bash installer.sh
 # That's it
 
 ```
+---
 
 Please provide feedback, add additional tweaks and/or raise issues.
 

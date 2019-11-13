@@ -8,7 +8,8 @@
 
 # Get updates
 update_system () {
-sudo apt update && sudo apt upgrade -y
+sudo apt update -y && sudo apt upgrade -y
+sudo dpkg --configure -a
 
 }
 add_ppas () {
@@ -29,7 +30,8 @@ sudo apt install -y firefox
 pushd ~/Downloads
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-rm . *.deb
+rm *.deb
+sudo dpkg --configure -a
 popd
 }
 start_programs () {
@@ -43,9 +45,9 @@ sudo apt install -y snapd
 yes | sudo snap install pycharm-community --classic
 # install R and RStudio(1.2.1335)
 
-sudo apt install -y r-base
+sudo apt install -y r-base -f
 # install rstudio 1.2.1335
-sudo apt  install -y libx11-dev libxt-dev
+sudo apt  install -y libx11-dev libxt-dev libclang-dev -f
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 yes | sudo dpkg -i rstudio-1.2.1335-amd64.deb
 rm rstudio*.deb
@@ -53,6 +55,7 @@ rm rstudio*.deb
 sudo apt install -y python3-pip
 sudo pip3 install --upgrade pip
 sudo pip3 install jupyter pandas matplotlib sklearn scipy numpy requests seaborn
+sudo dpkg --configure -a
 }
 install_pdf_related () {
 # Not related to pdf but put here
@@ -67,7 +70,7 @@ rm pandoc*.deb
 misc_install () {
 sudo apt -y install --install-recommends winehq-stable
 sudo apt install -y screenfetch neofetch rsync
-sudo dpkg --configure --all
+sudo dpkg --configure -a
 }
 # Removes any old versions of docker
 remove_old_docker() {
@@ -83,6 +86,7 @@ install_docker () {
     yes | sudo systemctl start docker
     yes | sudo systemctl enable docker
 }
+echo -e "\e[1;43m This may take a while :) \e[0m"
 update_system
 add_ppas
 install_tweakers
