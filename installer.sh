@@ -118,6 +118,8 @@ sudo apt install -y screenfetch neofetch
 sudo apt install -y rsync
 # configure all packages manually
 sudo dpkg --configure --all
+# Fancy exit
+echo -e "\e[1;43m Thank you for using the installer \e[0m"
 
 
 
