@@ -64,7 +64,39 @@ wget https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.
 yes | sudo dpkg -i pandoc*
 rm pandoc*.deb
 }
-# install python
+misc_install () {
+sudo apt -y install --install-recommends winehq-stable
+sudo apt install -y screenfetch neofetch rsync
+sudo dpkg --configure --all
+}
+# Removes any old versions of docker
+remove_old_docker() {
+
+if  [ -x "$(command -v docker)" ]; then
+       yes | sudo apt --remove docker.engine docker.io
+fi
+
+}
+install_docker () {
+    sudo apt install -y docker.io
+    # start and run docker
+    yes | sudo systemctl start docker
+    yes | sudo systemctl enable docker
+}
+update_system && add_ppas && install_tweakers && install_browsers && start_programs && install_rpy && install_pdf_related && misc_install
+remove_old_docker
+install_docker
+# Fancy exit
+echo -e "\e[1;43m Thank you for using the installer \e[0m"
+
+
+
+
+
+
+
+
+
 #sudo apt install -y build-essential checkinstall
 #sudo apt install -y libreadline-gplv2-dev libcursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdm-dev sudo apt install -y libc6-dev libbz2-dev libffi-dev zlib1g-dev
 #
@@ -89,36 +121,3 @@ rm pandoc*.deb
 # edit sudoers list
 # sudo /usr/sbin/visudo
 # proceed as you wish
-misc_install () {
-sudo apt -y install --install-recommends winehq-stable
-sudo apt install -y screenfetch neofetch rsync
-sudo dpkg --configure --all
-}
-# Removes any old versions of docker
-remove_old_docker() {
-
-if  [ -x "$(command -v docker)" ]; then
-       yes | sudo apt --remove docker.engine docker.io
-fi
-
-}
-install_docker () {
-    sudo apt install -y docker.io
-    # start and run docker
-    yes | sudo systemctl start docker
-    yes | sudo systemctl enable docker
-}
-
-remove_old_docker
-install_docker
-# Fancy exit
-echo -e "\e[1;43m Thank you for using the installer \e[0m"
-
-
-
-
-
-
-
-
-
