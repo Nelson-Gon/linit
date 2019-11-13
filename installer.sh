@@ -86,17 +86,24 @@ install_docker () {
     yes | sudo systemctl start docker
     yes | sudo systemctl enable docker
 }
+install_missing () {
+sudo apt install -y -f && sudo apt update -y && sudo apt update -y
+
+}
 echo -e "\e[1;43m This may take a while :) \e[0m"
 update_system
 add_ppas
 install_tweakers
 install_browsers
 install_rpy
+install_missing
 install_pdf_related
 misc_install
 remove_old_docker
 install_docker
+install_missing
 start_programs
+
 # Fancy exit
 echo -e "\e[1;43m Thank you for using the installer \e[0m"
 
