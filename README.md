@@ -10,7 +10,7 @@ running it on your machine. Alternatively, you can edit the **installer.sh** fil
 
 This repository provides a seamless way to install many of the commonly used programs/scripts.
 
-It has been tested on an Ubuntu system and might therefore fail to run on a non Debian based distribution. In addition, some of these programs are based on amd64 architecture and might therefore not work on a 32-bit system.
+**It has been tested on an Ubuntu system and might therefore fail to run on a non Debian based distribution. In addition, some of these programs are based on amd64 architecture and might therefore not work on a 32-bit system.**
 
 The script will run for sometime for a fresh installation depending on the network speed and/or hardware. 
 
