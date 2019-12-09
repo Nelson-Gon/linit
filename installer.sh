@@ -82,6 +82,14 @@ if  [ -x "$(command -v docker)" ]; then
 fi
 
 }
+# This installs  bluetooth related stuff
+configure_bluetooth () {
+
+    sudo apt install -y bluetooth bluez bluez-tools rfkill
+    sudo modprobe btusb
+    sudo systemctl enable bluetooth.service
+}
+
 install_docker () {
     sudo apt install -y docker.io
     # start and run docker
@@ -108,6 +116,7 @@ misc_install
 remove_old_docker
 install_docker
 install_missing
+configure_bluetooth
 start_programs
 
 # Fancy exit
