@@ -98,14 +98,14 @@ sudo apt install -y -f && sudo apt update -y && sudo apt update -y
 remove_nolonger_needed () {
   yes | sudo apt autoremove
 }
-echo -e "\e[1;43m This may take a while :) \e[0m"
-echo -e "\e[5;97m Updating System \e[0m"
+echo -e "\e[1;12m This may take a while :) \e[2m"
+echo -e "\e[1;12m Updating System \e[2m"
 update_system
-echo -e "\e[5;97m Adding a few useful PPAs \e[0m"
+echo -e "\e[1;12m Adding a few useful PPAs \e[2m"
 add_ppas
-echo -e "\e[5;97m Installing Appearance Tweakers \e[0m"
+echo -e "\e[1;12m Installing Appearance Tweakers \e[2m"
 install_tweakers
-echo -e "\e[5;97m Still Working, this will not take long. \e[0m"
+echo -e "\e[1;12m Still Working, this will not take long. \e[2m"
 install_browsers
 install_rpy
 install_missing
@@ -118,7 +118,7 @@ configure_bluetooth
 start_programs
 remove_nolonger_needed
 # Fancy exit
-echo -e "\e[1;43m Thank you for using the installer \e[0m"
+echo -e "\e[1;12m Thank you for using the installer \e[2m"
 
 exit
 
