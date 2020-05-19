@@ -50,7 +50,7 @@ sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic
 sudo apt install -y r-base
 # install rstudio 1.2.5042
 sudo apt  install -y libx11-dev libxt-dev libclang-dev -f
-wget https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.5042-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5042-amd64.deb
 yes | sudo dpkg -i rstudio-1.2.5042-amd64.deb
 # Fix issues with dependencies
 sudo apt install -y -f
