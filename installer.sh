@@ -54,9 +54,9 @@ yes | sudo dpkg -i rstudio-1.2.5042-amd64.deb
 sudo apt install -y -f
 rm rstudio*.deb
 # install pip3 and popular libraries(for ML enthusiasts)
-sudo apt install -y python3-pip
-sudo pip3 install --upgrade pip
-sudo pip3 install jupyter pandas matplotlib sklearn scipy numpy requests seaborn opencv-python skimage
+#sudo apt install -y python3-pip
+sudo python -m pip install --upgrade pip
+sudo python -m pip install jupyter pandas matplotlib sklearn scipy numpy requests seaborn opencv-python scikit-image
 sudo dpkg --configure -a
 }
 install_pdf_related () {
@@ -130,27 +130,3 @@ exit
 
 
 
-#sudo apt install -y build-essential checkinstall
-#sudo apt install -y libreadline-gplv2-dev libcursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdm-dev sudo apt install -y libc6-dev libbz2-dev libffi-dev zlib1g-dev
-#
-# Download and compile from source
-#cd /usr/src
-# 3.7.4 at the time of writing
-#sudo wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
-#sudo tar -xzf Python-3.7.4
-#cd Python-3.7.4
-#sudo .\configure --enable-optimizations
-## prevent removal of default python files
-#sudo make altinstall
-# remove leftover  files
-#sudo rm /usr/src/Python-3.7.4.tgz
-# set default to vim
-# sudo update-alternatives --config editor
-# edit grub
-#vim /etc/default/grub
-# add image, acpi, quiet splash, timeout
-# set aliases
-# sudo vim ~/.bashrc
-# edit sudoers list
-# sudo /usr/sbin/visudo
-# proceed as you wish
