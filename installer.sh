@@ -46,17 +46,17 @@ sudo apt install -y snapd
 yes | sudo snap install pycharm-community --classic
 # install R and RStudio(1.2.1335)
 sudo apt install -y r-base
-# install rstudio 1.2.1335
+# install rstudio 1.2.5042
 sudo apt  install -y libx11-dev libxt-dev libclang-dev -f
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
-yes | sudo dpkg -i rstudio-1.2.1335-amd64.deb
+wget https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.5042-amd64.deb
+yes | sudo dpkg -i rstudio-1.2.5042-amd64.deb
 # Fix issues with dependencies
 sudo apt install -y -f
 rm rstudio*.deb
 # install pip3 and popular libraries(for ML enthusiasts)
 sudo apt install -y python3-pip
 sudo pip3 install --upgrade pip
-sudo pip3 install jupyter pandas matplotlib sklearn scipy numpy requests seaborn
+sudo pip3 install jupyter pandas matplotlib sklearn scipy numpy requests seaborn opencv-python skimage
 sudo dpkg --configure -a
 }
 install_pdf_related () {
