@@ -80,13 +80,7 @@ sudo apt install -y screenfetch neofetch rsync
 sudo dpkg --configure -a
 }
 # Removes any old versions of docker
-remove_old_docker() {
 
-if  [ -x "$(command -v docker)" ]; then
-       yes | sudo apt --remove docker.engine docker.io
-fi
-
-}
 # This installs  bluetooth related stuff
 configure_bluetooth () {
 
@@ -95,15 +89,14 @@ configure_bluetooth () {
     sudo systemctl enable bluetooth.service
 }
 
-install_docker () {
-    sudo apt install -y docker.io
-    # start and run docker
-    yes | sudo systemctl start docker
-    yes | sudo systemctl enable docker
-}
+
 install_missing () {
 sudo apt install -y -f && sudo apt update -y && sudo apt update -y
 
+}
+
+remove_nolonger_needed () {
+  yes | sudo apt autoremove
 }
 echo -e "\e[1;43m This may take a while :) \e[0m"
 echo -e "\e[5;97m Updating System \e[0m"
@@ -123,7 +116,7 @@ install_docker
 install_missing
 configure_bluetooth
 start_programs
-
+remove_nolonger_needed
 # Fancy exit
 echo -e "\e[1;43m Thank you for using the installer \e[0m"
 
