@@ -44,7 +44,9 @@ sudo ufw enable
 install_rpy () {
 sudo apt install -y snapd
 yes | sudo snap install pycharm-community --classic
-# install R and RStudio(1.2.1335)
+# install R 4.0 and RStudio(1.2.1335)
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'
 sudo apt install -y r-base
 # install rstudio 1.2.5042
 sudo apt  install -y libx11-dev libxt-dev libclang-dev -f
@@ -66,6 +68,9 @@ sudo apt install -y mupdf evince gimp okular texlive-latex-recommended
 # install pandoc
 # 2.7.3 at the time of writing
 wget https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.deb
+# automate download
+#wget https://github.com/jgm/pandoc/releases/download/latest/pandoc-2.7.3-1-amd64.deb
+
 yes | sudo dpkg -i pandoc*
 rm pandoc*.deb
 }
