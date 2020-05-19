@@ -7,6 +7,14 @@
 #!/bin/bash
 
 # Get updates
+ensure_debian_based () {
+if [ -f "/etc/debian_version" ]
+then
+  echo "Awesome! Debian detected, Proceeding with installation!"
+else
+  echo "Sorry, this currently works on Debian only"
+fi
+}
 update_system () {
 sudo apt update -y && sudo apt upgrade -y
 sudo dpkg --configure -a
@@ -98,6 +106,7 @@ sudo apt install -y -f && sudo apt update -y && sudo apt update -y
 remove_nolonger_needed () {
   yes | sudo apt autoremove
 }
+ensure_debian_based
 echo -e "\e[1;12m This may take a while :) \e[2m"
 echo -e "\e[1;12m Updating System \e[2m"
 update_system
