@@ -12,7 +12,8 @@ if [ -f "/etc/debian_version" ]
 then
   echo "Awesome! Debian detected, Proceeding with installation!"
 else
-  echo "Sorry, this currently works on Debian only"
+  echo "Sorry, this currently works on Debian only. Exiting..."
+  exit
 fi
 }
 update_system () {
