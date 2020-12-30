@@ -13,7 +13,7 @@ then
   echo "Awesome! Debian detected, Proceeding with installation!"
 else
   echo "Sorry, this currently works on Debian only. Exiting..."
-  exit
+  exit 1
 fi
 }
 update_system () {
