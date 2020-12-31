@@ -16,10 +16,11 @@ jobs:
 
 
 
-    - name: Test flawless run
-      run: |
-      chmod +x ./installer.sh
-      sh installer.sh
+    - name: Make executable
+      run: chmod +x installer.sh
+
+    - name: Run script
+      run: bash installer.sh
 
 
 
