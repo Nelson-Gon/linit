@@ -1,10 +1,11 @@
+#!/bin/bash
+
 # This will make a few changes to a newly installed GNU/Linux system
 # This has been tested on a Debian based distro(Ubuntu 18.04.3)
 # It uses (the) bash
 # Most commands are written line by line to enable easy commenting out of
 # whatever a user doesn't need
 # Feel free to edit and add whatever you like
-#!/bin/bash
 
 # Get updates
 ensure_debian_based () {
@@ -38,12 +39,12 @@ sudo apt install -y  boot-repair ubuntu-restricted-extras unity-tweak-tool gnome
 install_browsers (){
 # sudo apt install -y firefox; Just update
 # Add Chrome
-pushd ~/Downloads
+pushd ~/Downloads || "Failed to go to Downloads" && exit
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-rm *.deb
+rm ./*.deb
 sudo dpkg --configure -a
-popd
+popd || echo "Failed, exiting.." && exit
 }
 start_programs () {
 sudo tlp start
