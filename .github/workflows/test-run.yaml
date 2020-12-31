@@ -18,8 +18,8 @@ jobs:
 
     - name: Test flawless run
       run: |
-      chmod +x "${GITHUB_WORKSPACE}/installer.sh"
-      "${GITHUB_WORKSPACE}/installer.sh"
+      chmod +x ./installer.sh
+      sh installer.sh
 
 
 
