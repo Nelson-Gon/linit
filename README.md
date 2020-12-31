@@ -1,7 +1,7 @@
 # linit
 ## Utilities for a freshly installed Linux System
 
-![Test-Run](https://github.com/Nelson-Gon/linit/workflows/run-script/badge.svg)
+![run-script](https://github.com/Nelson-Gon/linit/workflows/run-script/badge.svg)
 
 **IMPORTANT**: 
 
