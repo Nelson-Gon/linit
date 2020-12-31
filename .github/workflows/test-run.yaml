@@ -8,19 +8,15 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
   steps:
-    - uses: actions/checkout@v2
-
-
-
-    - name: Make executable
-      run: chmod +x installer.sh
-
-    - name: Run script
-      run: bash installer.sh
+  - uses: actions/checkout@v2
+  - name: Make executable
+    run: chmod +x installer.sh
+    
+  - name: Run script
+    run: bash installer.sh
 
 
 
