@@ -1,0 +1,25 @@
+name: Test-Script
+
+on:
+  push:         {branches: [dev]}
+  pull_request: {branches: [dev]}
+
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+
+
+    - name: Test flawless run
+      run: |
+      # Make executable and test run
+        chmod +x "${GITHUB_WORKSPACE}/installer.sh"
+        "${GITHUB_WORKSPACE}/installer.sh"
+
+
+
+
+
