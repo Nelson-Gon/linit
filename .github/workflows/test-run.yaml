@@ -1,4 +1,4 @@
-name: Test-Script
+name: Run script
 
 on:
   push:         {branches: [dev]}
@@ -8,19 +8,18 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+   
 
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    steps:
+    - uses: actions/checkout@v2
 
-    - name: Make executable
-      run: chmod +x installer.sh
+
 
     - name: Run script
-      run: bash installer.sh
-
-
-
+      run: |
+       chmod +x installer.sh
+       bash installer.sh
 
 
