@@ -101,7 +101,7 @@ configure_bluetooth () {
 
 
 install_missing () {
-sudo apt install -y -f && sudo apt update -y && sudo apt update -y
+sudo apt install -y -f && sudo apt update -y
 
 }
 
