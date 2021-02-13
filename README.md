@@ -31,7 +31,7 @@ These are stored in `installer.sh` which does the following:
 6. Installs `tlp` which is a battery saver.
 7. Installs `caffeine`. if you're a movie fan, you'll surely need this.
 8. Installs `R`, `RStudio`, ~`python3`(**Python 3.7.4** at the time of writing)~,`pip3`,`pandas`,`matplotlib`,`seaborn`,
-`sklearn`,`scipy`,`numpy`, `opencv`, `scikit-image`
+`sklearn`,`scipy`,`numpy`, `opencv`, `scikit-image`, `Keras`, `torch`, `torchvision`, `tensorflow`. 
 9. Installs the `plank` dock.
 10. Installs `pandoc`, `texlive`,`mupdf`,`evince`, `gimp`
 11. Installs `Firefox`, `chrome`, `wine`
