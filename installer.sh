@@ -36,6 +36,7 @@ install_tweakers () {
 sudo apt install -y  boot-repair ubuntu-restricted-extras unity-tweak-tool gnome-tweak-tool gnome-shell
 sudo apt install -y vlc tlp tlp-rdw caffeine plank macbuntu-os-icons-v1804
 sudo apt install -y macbuntu-os-ithemes-v1804 macbuntu-os-plank-theme-v1804 vim
+sudo apt install -y -f
 # choose themes with tweak tool.
 }
 install_browsers (){
